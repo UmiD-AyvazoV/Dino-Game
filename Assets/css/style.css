@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#game {
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/002/189/156/small_2x/desert-forest-landscape-at-sunset-scene-with-oasis-free-vector.jpg') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#dino {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  z-index: 1;
+}
+
+#dino img {
+  width: 400px;
+  height: 400px;
+}
+
+.dinoActive {
+  animation: dinoActive .5s linear;
+}
+
+@keyframes dinoActive {
+  0% {
+    bottom: 70px;
+    transform: rotateZ(90deg);
+  }
+  30% {
+    bottom: 250px;
+    transform: rotateZ(150deg);
+  }
+  50% {
+    bottom: 300px;
+    transform: rotateZ(220deg);
+  }
+  80% {
+    bottom: 250px;
+    transform: rotateZ(300deg);
+  }
+  100% {
+    bottom: 70px;
+    transform: rotateZ(360deg);
+  }
+}
+
+#cactusDiv {
+  position: absolute;
+  bottom: 70px;
+  left: 1800px;
+}
+
+.cactusActive {
+  animation: cactusActive 1.5s infinite linear;
+}
+
+#cactusDiv img {
+  height: 200px;
+}
+
+@keyframes cactusActive {
+  0% {
+    left: 2000px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+#shameEnd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.score {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
